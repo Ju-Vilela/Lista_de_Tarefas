@@ -1,0 +1,151 @@
+:root {
+    --azul_1: #99B3B1;
+    --azul_2: #A7BCB7;
+    --azul_3: #B6C6BE;
+    --azul_4: #C5D0C4;
+    --azul_5: #D3D9CB;
+    --azul_6: #D9DAC9;
+
+    --Hvazio: #A6B3AC;
+    --Bvazio: #C0C6BA;
+
+    --urgente: #f98a78;
+    --pendente: #fcf983;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/*============= CABEÇALHO ↴ =============*/
+.header {
+    background-color: var(--azul_1);
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+}
+
+/* Espaço após o input */
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*============= INPUT =============*/
+input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 70%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+    word-wrap: break-word;
+}
+
+/*============= ADD =============*/
+.addBtn {
+    padding: 10px;
+    width: 25%;
+    background: var(--azul_3);
+    color: white;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+}
+
+.addBtn:hover {
+    background-color: var(--azul_3);
+}
+
+
+
+/* ============= TABELA ↴ =============*/
+#myTable {
+    border-collapse: collapse;
+    width: 100%;
+    border-top: 1px solid var(--azul_6);
+    font-size: 18px;
+}
+
+#myTable tr.category {
+    color: white;
+    text-transform: uppercase;
+    font-weight: none;
+}
+
+#myTable th {
+    background-color: var(--azul_3);
+    text-align: center;
+    padding: 12px;
+}
+
+#myTable td {
+    text-align: left;
+    padding: 12px;
+    word-wrap: break-word;
+    cursor: pointer;
+}
+
+#myTable td.hora {
+    text-align: center;
+}
+
+#myTable tr {
+    border-bottom: 1px solid var(--azul_6);
+}
+
+#myTable tr:hover:not(.category) {
+    background-color: var(--azul_6);
+}
+
+.id {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+/*============= CHECKED =============*/
+/* Quando clicado, adiciona uma cor de fundo e esvaia o texto */
+table tr.checked:not(.category) {
+    background: var(--azul_5);
+    color: white;
+}
+
+table tr.checked td.item::before {
+    content: '\02714';
+    margin-right: 2%;
+}
+
+table tr td.item::before {
+    content: '\025A2';
+    margin-right: 2%;
+}
+
+/*============= CLOSE =============*/
+.close {
+    padding: 16px;
+    cursor: pointer;
+}
+
+.close:hover {
+    background-color: var(--azul_1);
+    color: white;
+}
+
+
+/* ========== PENDENTE =========*/
+table tr.pendente {
+    background: var(--pendente);
+    color: black;
+}
+
+table tr.urgente {
+    background-color: var(--urgente);
+}
